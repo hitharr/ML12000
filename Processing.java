@@ -1,6 +1,8 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 import java.io.*;
+
 /**
  * This class is used in order to create a Naive Bayes classifier
  * Calculations for conditional probability are done in this class and utilized
@@ -23,6 +25,7 @@ public class Processing {
 		 * @throws IOException error with input/output
 		 */
 		public void runAlg(String input) throws IOException{
+			
 			Scanner scan = new Scanner(new File(input));
 			// Read the data into an instance class first 3 = binary, next 139 is reals, next number is 1 of 6, 
 			//next 3 is reals, next 26 are out of 10, next 4 are out of 100, then the class value
@@ -82,15 +85,38 @@ public class Processing {
 				}
 			}
 			scan.close();
-			//testing function
-			for(int i = 0; i < 10; i++){
-				dataSet.get(i).print();
-			}
 		}
 		/** 
 		 * @return the number of instances
 		 */
 		public int getNumInstances(){
 			return numInstances;
+		}
+		
+		public void printInstances() {
+			int count = 1;
+			for(Instance i: dataSet) {
+				ArrayList<Integer> binaries= i.getBin();
+				ArrayList<Double> reArrayList= i.getReals();
+				int year = i.getYear();
+				ArrayList<Integer> tens= i.getTens();
+				ArrayList<Integer> hundreds = i.getHundreds();
+				int classVar= i.getClassVar();
+				/*printing out line by line
+				 */
+				System.out.println("Instance " + count);
+				System.out.println(" Binaries: " + binaries);
+				System.out.println(" Reals: " + reArrayList);
+				System.out.println(" Year: " + year);
+				System.out.println(" Tens: " + tens);
+				System.out.println(" Hundreds: " + hundreds);
+				System.out.println(" Class: " + classVar);
+				
+				
+				//printing out all values on one line
+				//System.out.println(binaries + " " + reArrayList + " " + year + " " + tens + " " + hundreds + " " + classVar);
+				
+				count++;
+			}
 		}
 }
