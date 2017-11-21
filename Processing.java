@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.io.*;
-
 /**
  * This class is used in order to create a Naive Bayes classifier
  * Calculations for conditional probability are done in this class and utilized
@@ -24,7 +23,6 @@ public class Processing {
 		 * @throws IOException error with input/output
 		 */
 		public void runAlg(String input) throws IOException{
-			
 			Scanner scan = new Scanner(new File(input));
 			// Read the data into an instance class first 3 = binary, next 139 is reals, next number is 1 of 6, 
 			//next 3 is reals, next 26 are out of 10, next 4 are out of 100, then the class value
@@ -84,6 +82,10 @@ public class Processing {
 				}
 			}
 			scan.close();
+			//testing function
+			for(int i = 0; i < 10; i++){
+				dataSet.get(i).print();
+			}
 		}
 		/** 
 		 * @return the number of instances

@@ -45,4 +45,9 @@ public class Instance {
 	public void addClass(int classV){
 		classVar = classV;
 	}
+	
+	public void print(){
+		System.out.println("Binary Numbers: " + binaries.toString());
+		System.out.println("Year: " + year);
+	}
 }
