@@ -26,7 +26,7 @@ public class Instance {
 		binaries.add(num);
 	}
 	
-	public void addReals(double num){
+	public void addReal(double num){
 		reals.add(num);
 	}
 	

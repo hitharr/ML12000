@@ -13,19 +13,19 @@ public class Main {
 		if(args.length!= 2){
 			System.out.println("The proper input is: java Assignment1 <Training Set> <Test Set>");
 		}
-		NaiveBayes algo = new NaiveBayes();
+		Processing algo = new Processing();
 		String trainSet = args[0];
-		String testSet = args[1];
+		//String testSet = args[1];
 		
 		//train and rints the parameters of the classifier that were estimated from the training set
 		algo.runAlg(trainSet);
-		algo.printAll();
+		//algo.printAll();
 		
 		//use Naive Bayes to determine the accuracy of the training and test sets
-		double trainAcc = algo.predict(trainSet);
-		System.out.printf("Accuracy on training set (" + algo.getNumInstances() + " instances): %.1f %% \n", trainAcc);
-		double testAcc = algo.predict(testSet);
-		System.out.printf("Accuracy on test set (" + algo.getNumInstances() + " instances): %.1f %% \n" , testAcc);
+		//double trainAcc = algo.predict(trainSet);
+		//System.out.printf("Accuracy on training set (" + algo.getNumInstances() + " instances): %.1f %% \n", trainAcc);
+		//double testAcc = algo.predict(testSet);
+		//System.out.printf("Accuracy on test set (" + algo.getNumInstances() + " instances): %.1f %% \n" , testAcc);
 
 	}
 }
