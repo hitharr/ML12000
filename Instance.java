@@ -1,0 +1,28 @@
+import java.util.ArrayList;
+
+/**
+ * Container class that holds information per line
+ * @author Thomas Yang
+ *
+ */
+public class Instance {
+	public ArrayList<Integer> binaries; //3
+	public ArrayList<Double> reals; //142
+	public int year; //2001,2002,3,4,5,6 (6 choices)
+	public ArrayList<Integer> tens; //26
+	public ArrayList<Integer> hundreds; //4
+	public int classVar;
+	
+	public Instance(){
+		binaries = new ArrayList<Integer>();
+		reals = new ArrayList<Double>();
+		year = -1;
+		tens = new ArrayList<Integer>();
+		hundreds = new ArrayList<Integer>();
+		classVar = -1;
+	}
+	
+	public void addBinary(int num){
+		
+	}
+}
