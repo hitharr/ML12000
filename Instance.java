@@ -23,6 +23,26 @@ public class Instance {
 	}
 	
 	public void addBinary(int num){
-		
+		binaries.add(num);
+	}
+	
+	public void addReal(double num){
+		reals.add(num);
+	}
+	
+	public void addYear(int y){
+		year = y;
+	}
+	
+	public void addTens(int num){
+		tens.add(num);
+	}
+	
+	public void addHundreds(int num){
+		hundreds.add(num);
+	}
+	
+	public void addClass(int classV){
+		classVar = classV;
 	}
 }
